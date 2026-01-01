@@ -19,7 +19,7 @@ resource "azurerm_linux_virtual_machine" "vm1" {
   location            = each.value.location
   size                = each.value.vm_size
   admin_username      = each.value.admin_username
-  admin_password = each.value.admin_password
+
   disable_password_authentication = each.value.disable_password_authentication
   network_interface_ids = [
     azurerm_network_interface.nic1[each.key].id
