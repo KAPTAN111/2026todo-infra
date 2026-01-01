@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # ---------------- AZURE LOGIN (ADDED ONLY) ----------------
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       # ---------------- Terraform ----------------
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -60,13 +66,12 @@ jobs:
         run: terraform apply -auto-approve
 
       # ---------------- DEMO STEPS ----------------
-
       - name: Display Date and Time
         run: date
 
       - name: List Files
         run: ls -la
-        
+
       - name: Print Hello World
         run: echo "Hello, World!"
 
