@@ -61,7 +61,7 @@ kv_todo2 = {
     rg_name                     = "rg_todo"
     enabled_for_disk_encryption = true
     soft_delete_retention_days  = 7
-    purge_protection_enabled    = false
+    purge_protection_enabled    = true
     sku_name                    = "standard"
   }
   network_acls = {
@@ -80,8 +80,8 @@ vm1 = {
     location                        = "eastus"
     vm_size                         = "Standard_B1s"
     admin_username                  = "kaptanadmin"
-    admin_password                  = "Kaptan@12345"
-    disable_password_authentication = false
+   
+    disable_password_authentication = true
 
     subnet_name = "frontendsubnet45"
     vnet_name   = "kaptanvnet45"
