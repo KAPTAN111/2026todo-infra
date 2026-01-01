@@ -6,7 +6,7 @@
     vm_name        = string
     vm_size        = string
     admin_username = string
-    admin_password = string
+    
     disable_password_authentication = bool
     subnet_name = string
     vnet_name = string
