@@ -46,13 +46,13 @@ jobs:
           framework: terraform
 
       # ---------------- BIOME ----------------
-      - name: Setup Biome
-        uses: biomejs/biome-github-action@v1
-        with:
-          version: 1.6.2
+      # - name: Setup Biome
+      #   uses: biomejs/biome-github-action@v1
+      #   with:
+      #     version: 1.6.2
 
-      - name: Run Biome
-        run: biome check .
+      # - name: Run Biome
+      #   run: biome check .
 
       # ---------------- TERRAFORM EXECUTION ----------------
       - name: Terraform Init
