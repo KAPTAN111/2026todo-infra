@@ -64,7 +64,15 @@ kv_todo2 = {
     purge_protection_enabled    = false
     sku_name                    = "standard"
   }
+  network_acls = {
+    default_action             = "Deny"
+    bypass                     = "AzureServices"
+    ip_rules                   = ["10.0.3.4"]
+    virtual_network_subnet_ids = ["/subscriptions/da14f257-30b3-482a-b2b2-16cc8c996b0a/resourceGroups/rg_todo/providers/Microsoft.Network/virtualNetworks/kaptanvnet45/subnets/frontendsubnet45"]
+  }
 }
+
+
 vm1 = {
   vmA = {
     vm_name                         = "kaptanvm1"
