@@ -1,6 +1,6 @@
 rg_todo2 = {
   rg1 = {
-    rg_name    = "rg_todo2"
+    rg_name    = "rg_todo"
     location   = "eastus"
     managed_by = "kaptan"
     tags = {
