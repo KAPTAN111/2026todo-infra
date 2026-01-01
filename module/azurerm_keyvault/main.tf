@@ -27,4 +27,10 @@ resource "azurerm_key_vault" "kv" {
       "Get",
     ]
   }
+  network_acls {
+    default_action = each.value.network_acls.default_action
+    bypass         = each.value.network_acls.bypass
+    ip_rules       = each.value.network_acls.ip_rules
+    virtual_network_subnet_ids = each.value.network_acls.virtual_network_subnet_ids
+  }
 }
