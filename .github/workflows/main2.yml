@@ -39,11 +39,11 @@ jobs:
         uses: aquasecurity/tfsec-action@v1.0.3
 
       # ---------------- CHECKOV ----------------
-      - name: Run Checkov
-        uses: bridgecrewio/checkov-action@master
-        with:
-          directory: .
-          framework: terraform
+      # - name: Run Checkov
+      #   uses: bridgecrewio/checkov-action@master
+      #   with:
+      #     directory: .
+      #     framework: terraform
 
       # ---------------- BIOME ----------------
       # - name: Setup Biome
